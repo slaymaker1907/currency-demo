@@ -30,7 +30,7 @@ export default class MainLayout extends Component {
             <h3>Links</h3>
             <Nav bsStyle="pills" stacked>
               <NavItemLink to="index">Index</NavItemLink>
-              <NavItemLink to="null-page">Null</NavItemLink>
+              <NavItemLink to="currency">Trading</NavItemLink>
             </Nav>
           </Col>
           <Col md={10} className="well">

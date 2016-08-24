@@ -13,6 +13,7 @@ import NullPage from "./pages/null";
 import SignInPage from "./pages/signin";
 import SignUpPage from "./pages/signup";
 import SignOut from "./pages/signout";
+import TradingPage from "./pages/trading";
 
 const container = document.getElementById("content");
 
@@ -26,7 +27,7 @@ const routes = (
     </Route>
     <Route name="home" path="/" handler={Layout}>
       <DefaultRoute name="index" handler={IndexPage} />
-      <Route name="null-page" path="null" handler={NullPage} />
+      <Route name="currency" path="currency" handler={TradingPage} />
       <Route name="profile" path="profile" handler={NullPage} />
       <NotFoundRoute handler={NotFoundPage} />
     </Route>

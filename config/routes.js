@@ -4,6 +4,7 @@ var Router = require("koa-router");
 var countController = require("../src/controllers/count");
 var indexController = require("../src/controllers/index");
 var authController = require("../src/controllers/auth");
+var currController = require("../src/controllers/currency");
 
 var secured = function *(next) {
   if (this.isAuthenticated()) {
@@ -37,5 +38,8 @@ module.exports = function(app, passport) {
   router.get("/value", secured, countController.getCount);
   router.get("/inc", secured, countController.increment);
   router.get("/dec", secured, countController.decrement);
+  router.post("/curr", secured, currController.recordCurrency);
+  router.get("/curr/:date", secured, currController.getCurrency);
+  router.get("/currDates", secured, currController.getCurrencyDates);
   app.use(router.routes());
 };
