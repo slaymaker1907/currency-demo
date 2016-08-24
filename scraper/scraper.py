@@ -64,7 +64,7 @@ if __name__ == '__main__':
         print('Getting data for ' + date.isoformat())
         sess = getattr(sessions, 'sess', None)
         if sess is None:
-            sess = login('slaymaker1907', '1149154g')
+            sess = login('username', 'password') # Change here
             sessions.sess = sess
         record_rate_data(date, sess)
         return True
